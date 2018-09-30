@@ -18,6 +18,12 @@ pub struct Int {
     sign: Sign,
 }
 
+impl Int {
+    pub fn is_zero(&self) -> bool {
+        self.sign == Sign::Zero
+    }
+}
+
 impl From<i32> for Int {
     fn from(num: i32) -> Self {
         Int {
